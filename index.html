@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio de Leomar Contreras</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="bg-dark text-white text-center p-4">
+    <h1>Leomar Contreras</h1>
+    <p>Desarrollador Backend | Archivólogo | Apasionado por la eficiencia</p>
+    <nav class="nav justify-content-center">
+      <a class="nav-link text-white" href="#sobre-mi">Sobre mí</a>
+      <a class="nav-link text-white" href="#experiencia">Experiencia</a>
+      <a class="nav-link text-white" href="#educacion">Educación</a>
+      <a class="nav-link text-white" href="#proyectos">Proyectos</a>
+      <a class="nav-link text-white" href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main class="container my-5">
+    <section id="sobre-mi" class="mb-5">
+      <h2>Sobre mí</h2>
+      <p>Profesional en Archivología con sólida experiencia en gestión documental. Actualmente me encuentro en transición hacia el desarrollo backend, aplicando habilidades avanzadas en Java, Spring Boot y bases de datos. Apasionado por optimizar sistemas y automatizar procesos para garantizar la accesibilidad de datos.</p>
+    </section>
+
+    <section id="experiencia" class="mb-5">
+      <h2>Experiencia</h2>
+      <ul>
+        <li><strong>Asistente de Archivo - Deloitte (2023 - Presente):</strong> Gestión de información digital, elaboración de inventarios.</li>
+        <li><strong>Asistente de Biblioteca - Inacap (2018 - 2023):</strong> Clasificación de trabajos, atención a usuarios, inventarios.</li>
+        <li><strong>Documentalista Audiovisual - Globovisión (2012 - 2017):</strong> Clasificación y organización de información audiovisual.</li>
+      </ul>
+    </section>
+
+    <section id="educacion" class="mb-5">
+      <h2>Educación y Certificaciones</h2>
+      <ul>
+        <li>Ingeniería en Informática - Inacap (5to semestre)</li>
+        <li>Licenciatura en Archivología - Universidad Central de Venezuela</li>
+        <li>Certificación en Spring Boot - Alura</li>
+        <li>SQL y MySQL Avanzado - Alura</li>
+      </ul>
+    </section>
+
+    <section id="proyectos" class="mb-5">
+      <h2>Proyectos</h2>
+      <p>Visita mis proyectos en <a href="https://github.com/Leomarj89" target="_blank">GitHub</a>.</p>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <form id="formulario-contacto">
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="nombre" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Correo electrónico</label>
+          <input type="email" class="form-control" id="email" required>
+        </div>
+        <div class="mb-3">
+          <label for="mensaje" class="form-label">Mensaje</label>
+          <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-white text-center p-3">
+    <p>&copy; 2025 Leomar Contreras | <a class="text-white" href="https://www.linkedin.com/in/leomar-contreras" target="_blank">LinkedIn</a></p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/script.js"></script>
+  <button id="btn-top" title="Volver arriba">&#8679;</button>
+</body>
+</html>
