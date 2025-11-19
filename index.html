@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio Bootcamp Java - Leomar Contreras</title>
+  <meta name="description" content="Portafolio técnico creado durante el Bootcamp de Java. Proyectos de Java, Spring Boot y bases de datos.">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-soft: #111827;
+      --card: #1f2937;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.1);
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --border: #4b5563;
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #1f2937 0, #020617 50%, #000 100%);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(12px);
+      background: linear-gradient(to bottom, rgba(15,23,42,0.95), rgba(15,23,42,0.85));
+      border-bottom: 1px solid rgba(148,163,184,0.25);
+    }
+
+    .nav-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0.8rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .logo {
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      font-size: 0.9rem;
+    }
+
+    nav a {
+      color: var(--muted);
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 3rem;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 2rem;
+      align-items: center;
+      padding: 2rem;
+      background: linear-gradient(135deg, rgba(56,189,248,0.08), rgba(15,23,42,0.95));
+      border-radius: 24px;
+      border: 1px solid rgba(148,163,184,0.35);
+      box-shadow: 0 30px 80px rgba(15,23,42,0.85);
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-title {
+      font-size: clamp(1.9rem, 3vw, 2.4rem);
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-subtitle {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 1.3rem;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .badge {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.6);
+      color: var(--muted);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.55rem 1.1rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      border: 1px solid transparent;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease, border-color 0.12s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #0b1120;
+      font-weight: 600;
+      box-shadow: 0 15px 40px rgba(56,189,248,0.4);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 55px rgba(56,189,248,0.6);
+    }
+
+    .btn-ghost {
+      border-color: rgba(148,163,184,0.6);
+      color: var(--muted);
+      background: rgba(15,23,42,0.8);
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    .hero-highlight {
+      background: radial-gradient(circle at top, rgba(56,189,248,0.15), transparent 55%);
+      border-radius: 999px;
+      padding: 0.4rem 0.9rem;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      border: 1px solid rgba(148,163,184,0.3);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .hero-right {
+      border-radius: 22px;
+      border: 1px solid rgba(148,163,184,0.4);
+      background: radial-gradient(circle at top left, rgba(56,189,248,0.2), rgba(15,23,42,0.98));
+      padding: 1.2rem 1rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+
+    .hero-right h2 {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text);
+    }
+
+    .hero-pill {
+      padding: 0.5rem 0.65rem;
+      border-radius: 14px;
+      background: rgba(15,23,42,0.9);
+      border: 1px solid rgba(148,163,184,0.35);
+    }
+
+    .hero-pill strong {
+      display: block;
+      color: var(--text);
+      font-size: 0.8rem;
+      margin-bottom: 0.2rem;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    .section-title {
+      font-size: 1.1rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .section-subtitle {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      background: rgba(15,23,42,0.95);
+      border-radius: var(--radius);
+      border: 1px solid rgba(148,163,184,0.4);
+      padding: 1rem;
+      box-shadow: 0 16px 40px rgba(15,23,42,0.9);
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .card h3 {
+      font-size: 0.98rem;
+    }
+
+    .card p {
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+      margin-top: 0.3rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .tag {
+      font-size: 0.7rem;
+      padding: 0.2rem 0.45rem;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: #e0f2fe;
+    }
+
+    .card-footer {
+      margin-top: auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .card-footer a {
+      font-size: 0.8rem;
+    }
+
+    .list-simple {
+      list-style: none;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    .list-simple li {
+      margin-bottom: 0.25rem;
+    }
+
+    .list-simple a {
+      color: var(--accent);
+    }
+
+    footer {
+      border-top: 1px solid rgba(148,163,184,0.3);
+      padding: 1.3rem 1.5rem 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      font-size: 0.8rem;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 1.4rem;
+      }
+
+      .hero-right {
+        order: -1;
+      }
+
+      .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <div class="logo">Portafolio Bootcamp · Java</div>
+      <nav>
+        <ul>
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#bd">Bases de datos</a></li>
+          <li><a href="#enlaces">Enlaces</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <div class="hero-highlight">
+          Portafolio técnico · Bootcamp Java
+        </div>
+        <h1 class="hero-title">Hola, soy Leomar</h1>
+        <p class="hero-subtitle">
+          Este portafolio reúne proyectos desarrollados durante mi formación en Java:
+          aplicaciones web, manejo de bases de datos y ejercicios prácticos de backend.
+          Aquí puedes explorar el código, la arquitectura y el enfoque técnico de cada proyecto.
+        </p>
+
+        <div class="hero-badges">
+          <span class="badge">Java · Spring</span>
+          <span class="badge">JSP / Servlets</span>
+          <span class="badge">SQL · MySQL · SQL Server</span>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#proyectos" class="btn btn-primary">Ver proyectos destacados</a>
+          <a href="https://github.com/Leomarj89/PortafolioBootcamp" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">
+            Ver repositorio en GitHub
+          </a>
+        </div>
+      </div>
+
+      <aside class="hero-right">
+        <h2>Resumen</h2>
+        <div class="hero-pill">
+          <strong>Enfoque principal</strong>
+          Desarrollo backend con Java, aplicaciones web MVC y gestión de bases de datos relacionales.
+        </div>
+        <div class="hero-pill">
+          <strong>Stack</strong>
+          Java · Spring Boot · JSP/Servlets · HTML · CSS · JavaScript · SQL (MySQL / SQL Server)
+        </div>
+        <div class="hero-pill">
+          <strong>Portafolio en construcción</strong>
+          Este sitio se irá actualizando con nuevos proyectos, mejoras visuales y enlaces a Behance y YouTube.
+        </div>
+      </aside>
+    </section>
+
+    <section id="sobre-mi">
+      <h2 class="section-title">Sobre mí</h2>
+      <p class="section-subtitle">
+        Desarrollador en formación, con experiencia práctica en proyectos de aula
+        orientados a la construcción de aplicaciones web, lógica de negocio en Java
+        y diseño de estructuras de datos en bases relacionales.
+      </p>
+    </section>
+
+    <section id="proyectos">
+      <h2 class="section-title">Proyectos destacados</h2>
+      <p class="section-subtitle">
+        Una selección de proyectos del Bootcamp que combinan lógica de negocio, patrones de diseño
+        y acceso a datos. Cada tarjeta enlaza a la carpeta correspondiente dentro de este repositorio.
+      </p>
+
+      <div class="projects-grid">
+        <article class="card">
+          <h3>Sistema de Biblioteca (MVC)</h3>
+          <p>
+            Aplicación web basada en el patrón MVC para gestionar una biblioteca:
+            libros, préstamos y usuarios. Centrada en la separación de capas y el uso de JSP/Servlets.
+          </p>
+          <div class="tags">
+            <span class="tag">Java</span>
+            <span class="tag">JSP / Servlets</span>
+            <span class="tag">MVC</span>
+          </div>
+          <div class="card-footer">
+            <a href="Biblioteca-mvc/" target="_blank" rel="noopener noreferrer">Ver carpeta del proyecto</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Sistema de Cursos de Capacitación</h3>
+          <p>
+            Proyecto orientado a la gestión de cursos, instructores y participantes,
+            usando principios de capas y potencial integración con Spring Boot.
+          </p>
+          <div class="tags">
+            <span class="tag">Java</span>
+            <span class="tag">Spring (en progreso)</span>
+            <span class="tag">Gestión de cursos</span>
+          </div>
+          <div class="card-footer">
+            <a href="CursosCapacitacion/" target="_blank" rel="noopener noreferrer">Ver carpeta del proyecto</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Agenda Digital de Eventos</h3>
+          <p>
+            Mini agenda digital utilizada para registrar y listar eventos internos,
+            reforzando el uso de controladores, vistas y lógica de negocio en Java.
+          </p>
+          <div class="tags">
+            <span class="tag">Java</span>
+            <span class="tag">Spring Boot</span>
+            <span class="tag">Eventos</span>
+          </div>
+          <div class="card-footer">
+            <a href="Evaluacion-AgendaDigital/" target="_blank" rel="noopener noreferrer">Ver carpeta del proyecto</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="bd">
+      <h2 class="section-title">Ejercicios de bases de datos</h2>
+      <p class="section-subtitle">
+        Conjunto de actividades enfocadas en el diseño y manejo de bases de datos:
+        modelos relacionales, consultas SQL, transacciones y definición de objetos.
+      </p>
+
+      <ul class="list-simple">
+        <li>📁 <a href="01-DefinicionBDRelacional/" target="_blank" rel="noopener noreferrer">01-DefinicionBDRelacional</a></li>
+        <li>📁 <a href="02-ConsultasSQL/" target="_blank" rel="noopener noreferrer">02-ConsultasSQL</a></li>
+        <li>📁 <a href="03-TransaccionesDatos/" target="_blank" rel="noopener noreferrer">03-TransaccionesDatos</a></li>
+        <li>📁 <a href="04-DefinicionObjetosDDL/" target="_blank" rel="noopener noreferrer">04-DefinicionObjetosDDL</a></li>
+        <li>📁 <a href="05-ModeloDatos/" target="_blank" rel="noopener noreferrer">05-ModeloDatos</a></li>
+      </ul>
+    </section>
+
+    <section id="enlaces">
+      <h2 class="section-title">Enlaces y presencia online</h2>
+      <p class="section-subtitle">
+        A medida que avance el portafolio, aquí se irán conectando las diferentes
+        plataformas: código, proyectos visuales y videos técnicos.
+      </p>
+
+      <ul class="list-simple">
+        <li>
+          🐙 GitHub:
+          <a href="https://github.com/Leomarj89" target="_blank" rel="noopener noreferrer">
+            github.com/Leomarj89
+          </a>
+        </li>
+        <li>
+          🎨 Behance:
+          <!-- Reemplaza este enlace cuando tengas tu URL real de Behance -->
+          <span>Próximamente (portafolio UX/UI)</span>
+        </li>
+        <li>
+          🎥 YouTube:
+          <span>Próximamente (video técnico explicando un proyecto)</span>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <span>© <span id="year"></span> Cristóbal · Portafolio Bootcamp Java</span>
+    <span>Licencia MIT · Ver archivo LICENSE en el repositorio</span>
+  </footer>
+
+  <script>
+    // Actualiza el año automáticamente
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
