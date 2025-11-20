@@ -68,8 +68,8 @@ Este repositorio funciona como mi portafolio técnico, donde documento proyectos
 
 Además de este repositorio técnico, también documento mis proyectos de diseño/UX/UI en Behance:
 
-👉 **Behance:** _(agrega aquí tu enlace cuando lo tengas)_  
-Ejemplo: `https://www.behance.net/tuUsuario`
+👉 **Behance:**
+https://www.behance.net/gallery/238926309/Sistema-de-Gestion-de-Cursos-de-Capacitacion
 
 En Behance encontrarás:
 - Presentaciones visuales de proyectos
@@ -79,7 +79,7 @@ En Behance encontrarás:
 
 ---
 
-## 🎥 Video(s) explicando proyectos
+## 🎥 Video explicando proyecto
 
 Estoy trabajando en videos cortos tipo tutorial donde explico algunos de estos proyectos (arquitectura, decisiones técnicas y demostración).
 
