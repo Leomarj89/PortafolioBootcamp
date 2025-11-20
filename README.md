@@ -81,9 +81,7 @@ En Behance encontrarás:
 
 ## 🎥 Video explicando proyecto
 
-Estoy trabajando en videos cortos tipo tutorial donde explico algunos de estos proyectos (arquitectura, decisiones técnicas y demostración).
-
-👉 Cuando publique el primer video en YouTube, lo enlazaré aquí y en la sección correspondiente de cada proyecto.
+Enlace: https://youtu.be/-eeaKdgoVvw
 
 ---
 
