@@ -7,8 +7,8 @@ Aquí muestro mi progreso en desarrollo backend, aplicaciones web, bases de dato
 
 ## 🚀 Visión general del portafolio
 
-- **Repositorio principal :** `PortafolioBootcamp`
-- **Sitio publicado (GitHub Pages):**  https://leomarj89.github.io/PortafolioBootcamp/
+- **Repositorio principal:** `PortafolioBootcamp`
+- **Sitio publicado (GitHub Pages):**  
   👉 https://leomarj89.github.io/PortafolioBootcamp/
 - **Portafolio visual en Behance (UX/UI):**  
   👉 https://www.behance.net/gallery/238926309/Sistema-de-Gestion-de-Cursos-de-Capacitacion
@@ -17,6 +17,24 @@ Aquí muestro mi progreso en desarrollo backend, aplicaciones web, bases de dato
 
 > 💡 Este portafolio está pensado como resumen global de mis proyectos, con foco en:  
 > 1) código (GitHub), 2) experiencia de usuario (Behance) y 3) explicación en video (YouTube).
+
+---
+
+## 🎯 Problemáticas que se abordan
+
+Los proyectos principales de este portafolio están pensados para resolver **situaciones reales**:
+
+- **Gestión de biblioteca:**  
+  Dificultad para controlar préstamos, catálogos y usuarios →  
+  👉 *Sistema de Biblioteca (MVC).*
+
+- **Gestión de cursos internos de capacitación:**  
+  Cursos administrados por Excel y correos, poca trazabilidad de asistentes →  
+  👉 *Sistema de Cursos de Capacitación (Spring Boot).*
+
+- **Registro de eventos internos:**  
+  Falta de un lugar centralizado para agendar reuniones, capacitaciones y actividades →  
+  👉 *Agenda Digital de Eventos.*
 
 ---
 
@@ -44,19 +62,22 @@ Aplicación web para gestión de una biblioteca (libros, usuarios, préstamos), 
 ### 2. Sistema de Cursos de Capacitación
 
 **Descripción:**  
-Sistema para gestionar cursos internos de capacitación: creación de cursos, asignación de instructores y registro de empleados.
+Sistema para gestionar cursos internos de capacitación: creación de cursos, asignación de instructores y registro de empleados.  
+Es uno de los **productos principales** del portafolio.
 
 - **Carpeta:** `CursosCapacitacion/`
 - **Tecnologías:**
-  - Java / Spring Boot (estructura orientada a capas)
-  - Thymeleaf o JSP (según implementación)
-  - JPA / JDBC (según versión del proyecto)
-- **Enfoque UX/UI:**
-  - Vistas separadas por rol (ADMIN / EMPLEADO).
-  - Formularios claros para crear/editar cursos.
-  - Tablas para listar cursos e inscripciones.
-- **Relación con Behance:**
-  - Utilizado como base para documentar el flujo de usuario y las pantallas en un proyecto de UX/UI.
+  - Java / Spring Boot (Web, Security, Data JPA)
+  - Thymeleaf (o JSP)
+  - Base de datos H2 en memoria
+- **Aspectos destacados:**
+  - Vistas separadas por rol: **ADMIN** y **EMPLEADO**.
+  - Gestión de cursos, instructores y cupos.
+  - Inscripción de empleados a cursos con validaciones.
+  - Exposición de una **API REST** para cursos e inscripciones.
+- **Relación con UX/UI:**
+  - Utilizado como base para documentar el flujo de usuario y las pantallas en un proyecto de UX/UI en Behance.
+  - Demostración técnica en video (YouTube).
 
 ---
 
@@ -69,7 +90,7 @@ Mini agenda para registrar y listar eventos internos (reuniones, capacitaciones,
 - **Tecnologías:**
   - Java
   - Spring Boot
-  - MVC + vistas HTML
+  - MVC + vistas HTML/Thymeleaf
 - **Funcionalidades clave:**
   - Registro de eventos (título, fecha, descripción, responsable).
   - Listado de eventos registrados.
@@ -109,7 +130,7 @@ El proceso para armar este portafolio fue el siguiente:
 2. **Organización en GitHub**
    - Agrupé todo en este repositorio `PortafolioBootcamp`.
    - Separé cada proyecto en su propia carpeta.
-   - Añadí/ajusté archivos `README` específicos en algunos proyectos para que se entiendan por sí solos.
+   - Añadí/ajusté archivos `README` específicos para que cada proyecto se entienda por sí solo.
 
 3. **Creación de la página principal**
    - Diseñé un `index.html` para funcionar como **landing page** del portafolio.
@@ -117,9 +138,9 @@ El proceso para armar este portafolio fue el siguiente:
    - Activé **GitHub Pages** para que el portafolio esté disponible en línea.
 
 4. **Integración con Behance y YouTube**
-   - Para el proyecto de **Cursos de Capacitación** (y Biblioteca) preparé una presentación tipo UX/UI en Behance.
+   - Para el proyecto de **Cursos de Capacitación** preparé una presentación tipo UX/UI en Behance.
    - Grabé un **video tutorial técnico** explicando uno de los proyectos y lo publiqué en YouTube.
-   - Añadí ambos enlaces en este README y/o en el `index.html`.
+   - Añadí ambos enlaces en este README y en la landing page.
 
 ---
 
@@ -140,11 +161,11 @@ El proceso para armar este portafolio fue el siguiente:
 ### 🔹 2. Configuración de GitHub Pages
 
 - **Reto:**  
-  Al principio, algunos enlaces desde la página publicada devolvían **errores 404** porque apuntaban a rutas que no existían como páginas HTML.
+  Algunos enlaces desde la página publicada devolvían **errores 404** porque apuntaban a rutas que no existían como páginas HTML.
 - **Solución:**  
-  - Ajusté los enlaces para que vayan:
-    - O bien a archivos `index.html` existentes.
-    - O directamente a las carpetas/proyectos en GitHub.
+  - Ajusté los enlaces para que apunten:
+    - A archivos `index.html` existentes, o
+    - Directamente a las carpetas/proyectos en GitHub.
   - Verifiqué manualmente los enlaces desde la URL pública hasta que todos funcionaron correctamente.
 
 ---
@@ -176,21 +197,20 @@ El proceso para armar este portafolio fue el siguiente:
 
 ---
 
-## 💬 Feedback y mejoras realizadas
+## ✅ Cómo este portafolio responde a la evaluación de portafolio
 
-Como parte del ejercicio, pedí a compañeros que revisaran mi portafolio y me dieran su opinión.  
-De esa retroalimentación surgieron mejoras como:
+- **Portafolio profesional y efectivo:**  
+  - Sitio web responsivo publicado en GitHub Pages.  
+  - Navegación clara por proyectos, bases de datos y enlaces externos.
 
-- **Claridad en los títulos de proyectos:**  
-  Renombrar algunos títulos para que indiquen mejor de qué trata cada sistema (por ejemplo, “Sistema de Biblioteca (MVC)” en lugar de solo “Biblioteca”).
+- **Productos tecnológicos para problemáticas reales:**  
+  - Al menos dos sistemas completos (Biblioteca y Cursos de Capacitación) que resuelven problemas reales de gestión interna.
+  - Agenda Digital de Eventos como proyecto adicional.
 
-- **Mejor descripción en los README:**  
-  Agregar secciones de “Objetivo”, “Tecnologías” y “Cómo ejecutar” para que cualquier persona (incluyendo el profesor) pueda entender rápidamente el proyecto.
-
-- **Corrección de enlaces rotos:**  
-  Algunos enlaces dentro de la página publicada devolvían 404. Después del feedback, revisé y corregí esos enlaces.
-
-> ✏️ A medida que reciba más feedback, seguiré iterando sobre este portafolio para mejorar tanto la presentación como la calidad del código.
+- **Documentación y evidencias:**  
+  - Código fuente disponible en GitHub.
+  - READMEs con descripción, tecnologías, objetivos y forma de ejecución.
+  - Caso UX/UI en Behance y video técnico en YouTube como evidencia adicional.
 
 ---
 

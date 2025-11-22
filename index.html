@@ -29,6 +29,7 @@
       background: radial-gradient(circle at top, #1f2937 0, #020617 50%, #000 100%);
       color: var(--text);
       min-height: 100vh;
+      line-height: 1.6;
     }
 
     a {
@@ -110,7 +111,6 @@
     .hero-subtitle {
       color: var(--muted);
       font-size: 0.95rem;
-      line-height: 1.6;
       margin-bottom: 1.3rem;
     }
 
@@ -262,7 +262,6 @@
     .card p {
       font-size: 0.85rem;
       color: var(--muted);
-      line-height: 1.6;
     }
 
     .tags {
@@ -365,8 +364,9 @@
         <h1 class="hero-title">Hola, soy Leomar</h1>
         <p class="hero-subtitle">
           Este portafolio reúne proyectos desarrollados durante mi formación en Java:
-          aplicaciones web, manejo de bases de datos y ejercicios prácticos de backend.
-          Aquí puedes explorar el código, la arquitectura y el enfoque técnico de cada proyecto.
+          aplicaciones web y soluciones que atacan problemas reales como la gestión de bibliotecas,
+          cursos de capacitación internos y eventos. Aquí puedes explorar el código, la arquitectura
+          y el enfoque técnico de cada proyecto.
         </p>
 
         <div class="hero-badges">
@@ -387,7 +387,8 @@
         <h2>Resumen</h2>
         <div class="hero-pill">
           <strong>Enfoque principal</strong>
-          Desarrollo backend con Java, aplicaciones web MVC y gestión de bases de datos relacionales.
+          Desarrollo backend con Java, aplicaciones web MVC y gestión de bases de datos relacionales
+          orientadas a resolver necesidades internas (biblioteca, cursos, eventos).
         </div>
         <div class="hero-pill">
           <strong>Stack</strong>
@@ -407,6 +408,10 @@
         orientados a la construcción de aplicaciones web, lógica de negocio en Java
         y diseño de estructuras de datos en bases relacionales.
       </p>
+      <p class="section-subtitle">
+        Mi objetivo profesional es integrarme a un equipo de desarrollo backend o
+        full-stack donde pueda aportar con Java/Spring, bases de datos y buenas prácticas de desarrollo.
+      </p>
     </section>
 
     <section id="proyectos">
@@ -421,7 +426,8 @@
           <h3>Sistema de Biblioteca (MVC)</h3>
           <p>
             Aplicación web basada en el patrón MVC para gestionar una biblioteca:
-            libros, préstamos y usuarios. Centrada en la separación de capas y el uso de JSP/Servlets.
+            libros, préstamos y usuarios. Nace de la necesidad de controlar mejor el
+            catálogo y los préstamos en una biblioteca pequeña.
           </p>
           <div class="tags">
             <span class="tag">Java</span>
@@ -429,31 +435,44 @@
             <span class="tag">MVC</span>
           </div>
           <div class="card-footer">
-            <a href="https://github.com/Leomarj89/PortafolioBootcamp/tree/main/Sistema%20de%20Biblioteca%20(MVC)" target="_blank" rel="noopener noreferrer">Ver carpeta del proyecto</a>
+            <a href="https://github.com/Leomarj89/PortafolioBootcamp/tree/main/Biblioteca-mvc" target="_blank" rel="noopener noreferrer">
+              Ver carpeta del proyecto
+            </a>
           </div>
         </article>
 
         <article class="card">
           <h3>Sistema de Cursos de Capacitación</h3>
           <p>
-            Proyecto orientado a la gestión de cursos, instructores y participantes,
-            usando principios de capas y potencial integración con Spring Boot.
+            Sistema para gestionar cursos internos, instructores y empleados inscritos.
+            Resuelve el problema de administrar capacitaciones que antes se manejaban con
+            planillas y correos, incorporando roles ADMIN/EMPLEADO y API REST.
           </p>
           <div class="tags">
             <span class="tag">Java</span>
-            <span class="tag">Spring (en progreso)</span>
-            <span class="tag">Gestión de cursos</span>
+            <span class="tag">Spring Boot</span>
+            <span class="tag">Security</span>
+            <span class="tag">API REST</span>
           </div>
           <div class="card-footer">
-            <a href="https://github.com/Leomarj89/PortafolioBootcamp/tree/main/Sistema%20de%20Cursos%20de%20Capacitaci%C3%B3n" target="_blank" rel="noopener noreferrer">Ver carpeta del proyecto</a>
+            <a href="https://github.com/Leomarj89/PortafolioBootcamp/tree/main/CursosCapacitacion" target="_blank" rel="noopener noreferrer">
+              Ver carpeta del proyecto
+            </a>
+            <a href="https://www.behance.net/gallery/238926309/Sistema-de-Gestion-de-Cursos-de-Capacitacion" target="_blank" rel="noopener noreferrer">
+              Ver caso UX/UI
+            </a>
+            <a href="https://www.youtube.com/watch?v=-eeaKdgoVvw" target="_blank" rel="noopener noreferrer">
+              Ver demo en video
+            </a>
           </div>
         </article>
 
         <article class="card">
           <h3>Agenda Digital de Eventos</h3>
           <p>
-            Mini agenda digital utilizada para registrar y listar eventos internos,
-            reforzando el uso de controladores, vistas y lógica de negocio en Java.
+            Mini agenda digital utilizada para registrar y listar eventos internos
+            (reuniones, capacitaciones, actividades), centralizando la información
+            que normalmente queda repartida en correos o notas.
           </p>
           <div class="tags">
             <span class="tag">Java</span>
@@ -461,7 +480,9 @@
             <span class="tag">Eventos</span>
           </div>
           <div class="card-footer">
-            <a href="https://github.com/Leomarj89/PortafolioBootcamp/tree/main/Agenda%20Digital%20de%20Eventos" target="_blank" rel="noopener noreferrer">Ver carpeta del proyecto</a>
+            <a href="https://github.com/Leomarj89/PortafolioBootcamp/tree/main/Evaluacion-AgendaDigital" target="_blank" rel="noopener noreferrer">
+              Ver carpeta del proyecto
+            </a>
           </div>
         </article>
       </div>
@@ -499,7 +520,7 @@
         </li>
         <li>
           🎨 Behance:
-          <a href="https://www.behance.net/gallery/238926309/Sistema-de-Gestion-de-Cursos-de-Capacitacion"target="_blank" rel="noopener noreferrer">
+          <a href="https://www.behance.net/gallery/238926309/Sistema-de-Gestion-de-Cursos-de-Capacitacion" target="_blank" rel="noopener noreferrer">
             behance.net/Sistema-de-Gestion-de-Cursos
           </a>
         </li>
