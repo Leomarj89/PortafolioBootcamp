@@ -1,4 +1,4 @@
-# Portafolio de Productos – Bootcamp Java
+  # Portafolio de Productos – Bootcamp Java
 
 Este repositorio reúne los proyectos más importantes que desarrollé durante el Bootcamp de Java, organizados como un **portafolio de productos**.  
 Aquí muestro mi progreso en desarrollo backend, aplicaciones web, bases de datos y diseño de interfaces.
@@ -45,7 +45,7 @@ Los proyectos principales de este portafolio están pensados para resolver **sit
 **Descripción:**  
 Aplicación web para gestión de una biblioteca (libros, usuarios, préstamos), usando el patrón **Modelo–Vista–Controlador (MVC)**.
 
-- **Carpeta:** `Biblioteca-mvc/`
+- **Carpeta:** `Sistema-de-Biblioteca-MVC/`
 - **Tecnologías:**
   - Java
   - JSP / Servlets
@@ -65,7 +65,7 @@ Aplicación web para gestión de una biblioteca (libros, usuarios, préstamos), 
 Sistema para gestionar cursos internos de capacitación: creación de cursos, asignación de instructores y registro de empleados.  
 Es uno de los **productos principales** del portafolio.
 
-- **Carpeta:** `CursosCapacitacion/`
+- **Carpeta:** `Sistema-de-Cursos-de-Capacitacion/`
 - **Tecnologías:**
   - Java / Spring Boot (Web, Security, Data JPA)
   - Thymeleaf (o JSP)
@@ -81,12 +81,12 @@ Es uno de los **productos principales** del portafolio.
 
 ---
 
-### 3. Agenda Digital de Eventos (Evaluacion-AgendaDigital)
+### 3. Agenda Digital de Eventos (Agenda Digital de Eventos)
 
 **Descripción:**  
 Mini agenda para registrar y listar eventos internos (reuniones, capacitaciones, actividades).
 
-- **Carpeta:** `Evaluacion-AgendaDigital/`
+- **Carpeta:** `Agenda-Digital-de-Eventos/`
 - **Tecnologías:**
   - Java
   - Spring Boot
